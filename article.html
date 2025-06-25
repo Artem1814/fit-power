@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title id="meta-title">Статья</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- библиотеки -->
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+
+  <!-- клиент Supabase -->
+  <script defer src="/js/supa-init.js"></script>
+
+  <!-- логика статьи + комментариев -->
+  <script defer src="/js/article-load.js"></script>
+  <script defer src="/js/comments.js"></script>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/img/fav.png">
+</head>
+<body class="body">
+  <div id="header-placeholder"></div>
+
+  <section class="article-page-section">
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="bread-wrapper">
+        <div class="bread-text" id="bread-crumbs"></div>
+      </div>
+    </div>
+
+    <div class="aticle-container">
+      <!-- Картинка заранее на месте, id именно article-image -->
+      <img id="article-image"
+           class="article-image article-image--page"
+           src="/img/placeholder.webp" alt="cover" width="768">
+
+      <!-- Пустой контейнер – JS сформирует разметку внутри -->
+      <div class="article-body" id="article-body"></div>
+    </div>
+  </section>
+
+  <!-- Комментарии -->
+  <section class="comments-section">
+    <div class="w-layout-blockcontainer comments-container w-container">
+      <div class="content-wrapper">
+        <div class="heading-wrapper"><h2 class="heading-2">Комментарии</h2></div>
+
+        <div id="comment-list" class="w-layout-grid comment-list"></div>
+
+        <div id="comment-form" class="comment-form">
+          <h3 class="comment-form-title">Оставить комментарий</h3>
+          <textarea id="comment-text" rows="4"
+                    class="comment-textarea"
+                    placeholder="Введите ваш комментарий..."></textarea>
+          <a id="submit-comment" href="#" class="comment-submit-button w-button">Отправить</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="/js/include-partials.js"></script>
+</body>
+</html>

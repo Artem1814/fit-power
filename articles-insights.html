@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Полезные статьи</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  
+   <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script defer src="/js/supa-init.js"></script>
+  <script defer src="/js/articles.js"></script>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/" rel="preconnect" />
+  <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous" />
+  <script src="../js/font-loader.js" type="text/javascript"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Manrope:300,regular,500,600,700,800:cyrillic,latin"]
+      }
+    });
+  </script>
+  <link href="../img/fav.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../img/webclip.png" rel="apple-touch-icon" />
+
+</head>
+   <body class="body">
+     <div id="header-placeholder"></div>
+      <section id="hero" class="hero-section">
+         <div class="w-layout-blockcontainer hero-container-pages w-container">
+            <div class="hero-heading">
+               <h1 class="h1">Полезные статьи</h1>
+               <div class="hero-text">Питайся. Тренируйся. Восстанавливайся.</div>
+            </div>
+            <a href="#articles-section" class="btn-1 pages w-button">Перейти к статьям</a>
+            <div class="darker"></div>
+            <div class="background-video-wrapper"><img src="/img/baza-znanij.webp" loading="lazy" width="70" alt="" class="bg-image"/></div>
+         </div>
+      </section>
+      <section id="articles-section" class="articles-section">
+         <div class="w-layout-blockcontainer container w-container">
+            <div class="content-wrapper">
+               <div class="heading-wrapper">
+                  <h2 class="heading-2">Полезные статьи</h2>
+                  <div class="category-description">
+                     <h3 class="heading-3">Действуй с умом</h3>
+                     <div class="text-block">Советы по тренировкам, питанию и восстановлению — простым языком, с опорой на опыт и исследования. Читайте, применяйте и развивайтесь вместе с нами.</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="w-layout-blockcontainer articles-container w-container">
+            <div class="article-filter-buttons"><a id="btn-all-articles" href="#" class="filter-button w-button">Все</a><a id="btn-recovery" href="#" class="filter-button w-button">Восстановление</a><a id="btn-training" href="#" class="filter-button w-button">Тренировки</a><a id="btn-nutrition" href="#" class="filter-button w-button">Питание</a></div>
+            <div id="article-list" class="articles-grid"></div>
+         </div>
+      </section>
+      <div id="footer-placeholder"></div>
+
+      <script src="/js/include-partials.js"></script>
+
+
+   </body>
+</html>

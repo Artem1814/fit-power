@@ -1,0 +1,68 @@
+/* achievements.css */
+
+/* Контейнер всей секции наград */
+.section {
+  /* Можно немного переопределить, если хотите 
+     иного фона или отступов именно для наград */
+  /* background: #1b1b1b; */
+  /* padding: 20px; */
+}
+
+/* Карточка награды */
+.achievement-card {
+  display: flex;              /* Располагаем иконку слева, текст - справа */
+  align-items: center;        /* Вертикальное выравнивание */
+  background: #2a2a2a;        /* Тёмно-серый фон */
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+/* Иконка */
+.ach-icon {
+  width: 64px;       /* Ставим фиксированный размер, например 64x64 */
+  height: 64px;
+  border-radius: 8px;
+  margin-right: 16px;
+  object-fit: cover; /* Если иконка другого соотношения, то не растягивать */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Блок с инфой о награде */
+.ach-info {
+  flex: 1;           /* Занимает всё оставшееся пространство */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;          /* Небольшой отступ между элементами */
+}
+
+/* Заголовок награды */
+.ach-title {
+  margin: 0;
+  font-size: 1.2rem;     /* Крупнее */
+  font-weight: 700;
+  color: #ff3b00;        /* Оранжевый акцент */
+}
+
+/* Описание награды */
+.ach-desc {
+  margin: 0;
+  color: #ccc;          /* Серый текст */
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+/* Дата получения */
+.ach-date {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 2px;
+}
+
+/* Можно чуть увеличить отступ снизу у последнего элемента */
+.achievement-card:last-child {
+  margin-bottom: 16px;
+}

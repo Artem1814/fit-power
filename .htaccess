@@ -1,0 +1,35 @@
+# Редирект с http на https создан автоматически при заказе бесплатного ssl-сертификата
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+# Конец редиректа
+
+# Включаем mod_rewrite
+RewriteEngine On
+
+# Отключаем вывод содержимого каталогов
+Options -Indexes
+
+# 1) Если физически существует файл или папка, ничего не делаем
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 2) (Опционально) если кто-то заходит на URL с .html,
+#    делаем 301-редирект на вариант без .html
+RewriteCond %{THE_REQUEST} \s/([^?\s]+)\.html
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# 3) Если НЕ существует файла/папки, но есть файл с таким же именем + .html,
+#    показываем его, «пряча» расширение.
+#    Пример: /about/ --> about.html
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)/?$ $1.html [NC,L]
+
+
+#потом убрать комменты и затестить 
+#<IfModule mod_headers.c>
+#    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+#    Header set Pragma "no-cache"
+#   Header set Expires "0"
+#</IfModule>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Прогрессивная нагрузка (превью)</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/" rel="preconnect" />
+  <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous" />
+  <script src="../js/font-loader.js" type="text/javascript"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Manrope:300,regular,500,600,700,800:cyrillic,latin"]
+      }
+    });
+  </script>
+  <link href="../img/fav.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../img/webclip.png" rel="apple-touch-icon" />
+
+</head>
+   <body class="body">
+     <div id="header-placeholder"></div>
+      <section id="hero" class="hero-section">
+         <div class="w-layout-blockcontainer container w-container">
+            <div class="bread-wrapper">
+               <div class="bread-text"><a href="../index.html" class="bread-link">Главная  </a>/  <a href="../levels/middle-level" class="bread-link">Средний уровень  </a> / Прогрессивная нагрузка</div>
+            </div>
+         </div>
+         <div class="w-layout-blockcontainer hero-container-pages w-container">
+            <div class="hero-heading">
+               <h1 class="h1">Прогрессивная нагрузка</h1>
+               <div class="hero-text">Программа для тех, кто не стоит на месте — и не собирается</div>
+            </div>
+            <div class="darker"></div>
+            <div class="background-video-wrapper"><img src="../img/progressivnaya-nagruzka.webp" loading="lazy" width="70" alt="" class="bg-image"/></div>
+         </div>
+      </section>
+      <section id="articles" class="training-category-section">
+         <div class="w-layout-blockcontainer container w-container">
+            <div class="w-layout-grid program-descriprtion-grid">
+               <img src="../img/vysokij-uroven.webp" loading="lazy" width="512" id="recipe-main-image" alt="" class="treaning-preview-image w-node-_0faf3c8b-4d8f-ddae-c2e6-cd0b6773eebb-2baad06f"/>
+               <div class="program-descr-div">
+                  <div class="program-descr-text-div">
+                     <h2 class="heading-2">О программе</h2>
+                     <h3 class="heading-3 small">Идеальна для перехода от базовых тренировок к полноценной силовой схеме.</h3>
+                     <div class="text-block">Мы увеличиваем объём и интенсивность, внедряем суперсеты, усиливаем акцент на мышечный контроль. Программа развивает не только силу, но и дисциплину — каждое занятие здесь по делу.</div>
+                  </div>
+                  <div class="program-descr-btn-div">
+                     <div class="text-block">Доступ к программе открывается только после регистрации аккаунта.</div>
+                     <a href="/lk/login" target="_blank" class="btn-1 program w-button">Открыть доступ</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="trainig-days-section">
+         <div class="w-layout-blockcontainer container w-container">
+            <div class="content-wrapper">
+               <div class="heading-wrapper">
+                  <h2 class="heading-2">Тренировки программы</h2>
+               </div>
+               <div class="treaning-days-grid">
+                  <div class="training-day-card">
+                     <div class="image-wrapper"><img src="../img/Group.svg" loading="lazy" alt="" class="lock-icon"/><img src="../img/myshechnyj-fundament.webp" loading="lazy" width="70" alt="" class="card-image"/></div>
+                     <h3 class="heading-3">День 1 - Рост и контроль</h3>
+                  </div>
+                  <div class="training-day-card">
+                     <div class="image-wrapper"><img src="../img/bazovyj-start.webp" loading="lazy" width="70" alt="" class="card-image"/><img src="../img/Group.svg" loading="lazy" alt="" class="lock-icon"/></div>
+                     <h3 class="heading-3">День 2 - Сила и выносливость</h3>
+                  </div>
+                  <div class="training-day-card">
+                     <div class="image-wrapper"><img src="../img/progressivnaya-nagruzka.webp" loading="lazy" width="70" alt="" class="card-image"/><img src="../img/Group.svg" loading="lazy" alt="" class="lock-icon"/></div>
+                     <h3 class="heading-3">День 3 - Обновление потенциала</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <div id="footer-placeholder"></div>
+
+      <script src="/js/include-partials.js"></script>
+<script>
+// При загрузке: проверяем, может пользователь уже авторизован
+if (localStorage.getItem('user_id')) {
+  // Сразу перенаправить на полную страницу
+  window.location.href = "/programs/progressive-load";
+}
+
+// Слушаем событие "storage". Оно сработает, если в другой вкладке
+// изменится localStorage.
+window.addEventListener('storage', (event) => {
+  // Если ключ user_id поменялся или появился:
+  if (event.key === 'user_id') {
+    const newVal = localStorage.getItem('user_id');
+    if (newVal) {
+      // теперь user_id есть => редирект на полную
+      window.location.href = "/programs/progressive-load";
+    }
+  }
+});
+</script>
+
+
+   </body>
+</html>

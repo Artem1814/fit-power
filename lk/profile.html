@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Мой профиль</title>
+
+  <!-- базовые стили ЛК -->
+  <link rel="stylesheet" href="cabinet.css" />
+
+  <!-- Иконки -->
+<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+  <style>
+    /* ===== сохранены ВСЕ ваши прежние стили ===== */
+    .profile-wrapper { max-width:1000px;margin:0 auto; }
+    .profile-card   { background:#1c1c1c;border:1px solid #333;border-radius:10px;
+                      padding:20px;box-shadow:0 2px 6px rgba(255,59,0,.2);margin-bottom:10px }
+    .profile-card h2{ color:#ff3b00;text-align:center;margin:0 0 16px }
+    .profile-container { display:flex;gap:20px;align-items:flex-start }
+    .avatar-section{ flex:0 0 200px;text-align:center }
+    .avatar-img   { width:180px;height:180px;border-radius:50%;object-fit:cover;
+                    margin-bottom:8px;border:2px solid #ff3b00;box-shadow:0 2px 4px rgba(0,0,0,.4) }
+    .fields-section{ flex:1 }
+    .form-group   { margin-bottom:10px }
+    .form-group label{ display:block;margin-bottom:4px;color:#ff3b00;font-weight:600 }
+    .form-group input{ width:100%;padding:10px;border-radius:6px;border:1px solid #444;
+                       background:#2a2a2a;color:#fff;font-size:1rem }
+    .file-label   { display:inline-block;background:#ff3b00;color:#fff;padding:10px 16px;
+                    border-radius:8px;cursor:pointer;font-weight:700;transition:.3s }
+    .file-label:hover{ background:#e73600 }  #avatar-file{ display:none }
+    #save-profile-btn,#change-pass-btn{ display:block;width:100%;background:#ff3b00;color:#fff;
+                    border:none;border-radius:8px;padding:14px 20px;font-size:1rem;
+                    font-weight:700;cursor:pointer;margin-top:10px;transition:.3s }
+    #save-profile-btn:hover,#change-pass-btn:hover{ background:#e73600 }
+
+    /* ── КНОПКА Telegram ───────────────────────── */
+     .tg-btn {
+    display: block; /* вместо inline-block */
+    width: 100%;    /* занимает всю ширину */
+    box-sizing: border-box; /* учитывает padding в ширине */
+    background: #34aaf7;
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center; /* текст по центру */
+    transition: .25s;
+    margin-top: 10px; /* отступ сверху */
+  }
+  .tg-btn:hover {
+    background: #259ae8;
+  }
+  </style>
+</head>
+<body>
+
+<div class="cabinet-wrapper">
+  <header class="cabinet-header">
+    <h1 class="fit-power-title">
+      <a href="https://fit-power.pro" target="fit-power-main" class="fit-power-link">FIT‑POWER</a>
+    </h1>
+    <button id="logout-btn">ВЫЙТИ</button>
+  </header>
+
+  <nav class="nav">
+    <a href="profile" class="active">Мой профиль</a>
+    <a href="my-trainer">Мой тренер</a>
+    <a href="my-programs">Мои программы</a>
+    <a href="achievements">Мои награды</a>
+    <a href="add">Добавить тренировку</a>
+    <a href="workouts">Мои тренировки</a>
+    <a href="stats">Моя статистика</a>
+    <a href="calc">Калькулятор калорий</a>
+  </nav>
+
+  <div class="profile-wrapper">
+
+    <!-- 1. Карточка профиля -->
+    <div class="profile-card">
+      <h2>Мой профиль</h2>
+      <div class="profile-container">
+
+        <div class="avatar-section">
+          <img id="avatar-preview" class="avatar-img" alt="avatar" />
+          <label for="avatar-file" class="file-label">Выбрать фото</label>
+          <input type="file" id="avatar-file" accept="image/*" />
+        </div>
+
+        <div class="fields-section">
+          <div class="form-group">
+            <label>Email (только просмотр):</label>
+            <input type="email" id="email" disabled />
+          </div>
+          <div class="form-group">
+            <label>Имя:</label>
+            <input type="text" id="first_name" />
+          </div>
+          <div class="form-group">
+            <label>Фамилия:</label>
+            <input type="text" id="last_name" />
+          </div>
+          <div class="form-group">
+            <label>Рост (см):</label>
+            <input type="number" id="height" />
+          </div>
+          <div class="form-group">
+            <label>Вес (кг):</label>
+            <input type="number" id="weight" />
+          </div>
+        </div>
+      </div>
+      <button id="save-profile-btn">СОХРАНИТЬ</button>
+    </div>
+
+    <!-- 2. Карточка смены пароля -->
+    <div class="profile-card">
+      <h2>Изменить пароль</h2>
+      <div class="form-group">
+        <label>Старый пароль:</label>
+        <input type="password" id="old_password" />
+      </div>
+      <div class="form-group">
+        <label>Новый пароль:</label>
+        <input type="password" id="new_password" />
+      </div>
+      <button id="change-pass-btn">ИЗМЕНИТЬ ПАРОЛЬ</button>
+    </div>
+
+    <!-- 3. Telegram‑уведомления -->
+    <div class="profile-card" id="tg-card">
+      <h2>Уведомления в&nbsp;Telegram</h2>
+      <p>Получайте напоминания о тренировках и&nbsp;новые статьи прямо в мессенджер.</p>
+
+      <!-- deep‑link заполнит JS -->
+      <a id="tg-link" class="tg-btn" target="_blank" rel="noopener">Подключить бота</a>
+
+      <small style="display:block;margin-top:8px;color:#aaa;">
+        После нажмите <b>Start</b> в&nbsp;чате бота.
+      </small>
+    </div>
+
+  </div>
+</div>
+
+<div id="notification" class="notification hidden"></div>
+
+<!-- ваш существующий скрипт -->
+<script src="profile.js"></script>
+
+<!-- мини‑скрипт формирует ссылку на бота ПОСЛЕ загрузки страницы -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const TG_BOT_USERNAME = 'FitPowerpro_bot';          // ← замените на @username своего бота
+    const userId = localStorage.getItem('user_id');
+    const linkEl = document.getElementById('tg-link');
+    if (linkEl && userId) linkEl.href = `https://t.me/${TG_BOT_USERNAME}?start=${userId}`;
+  });
+</script>
+</body>
+</html>

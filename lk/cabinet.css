@@ -1,0 +1,375 @@
+/* cabinet.css */
+body {
+  margin:0;
+  padding:0;
+  font-family:'Roboto',sans-serif;
+  background:#0d0d0d;
+  color:#fff;
+}
+
+.cabinet-wrapper {
+  padding:8px 16px;
+}
+
+/* Шапка */
+.cabinet-header {
+  position:relative;
+  height:40px;
+  margin-bottom:10px;
+}
+.fit-power-title {
+  position:absolute;
+  left:10px;
+  top:5px;
+  margin:0;
+  font-size:1.6rem;
+  color:#ff3b00;
+  font-weight:700;
+}
+/* Шрифтовая стилистика самого заголовка */
+.fit-power-title {
+  color: #ff3b00;
+  font-weight: 700;
+  /* все остальные ваши стили... */
+}
+
+/* Сбрасываем оформление ссылки, 
+   используем тот же цвет, что у родителя (inherit) */
+.fit-power-link {
+  color: inherit;          /* берёт #ff3b00 от .fit-power-title */
+  text-decoration: none;   /* убираем подчёркивание */
+}
+
+/* При наведении курсор становится pointer,
+   но цвет и подчёркивание не меняем */
+.fit-power-link:hover {
+  cursor: pointer;         /* чтобы показывался "палец" */
+  text-decoration: none;   /* не добавлять подчёркивания */
+}
+
+/* Кнопка "Выйти" */
+#logout-btn {
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  z-index: 1000; /* Добавляем поверх всех элементов */
+  background: #ff3b00;
+  color: #fff;
+  border: 2px solid #333333; /* Белая обводка */
+  border-radius: 8px;
+  padding: 18px 24px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s; /* Анимируем все свойства */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Необязательная тень */
+  box-sizing: border-box; /* Чтобы border не увеличивал размеры */
+}
+#logout-btn:hover {
+  background: #e73600;
+  border-color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Горизонтальное меню (.nav) со ссылками <a> */
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;       /* <-- Позволяем перенос на новую строку при нехватке места */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* Толстые ссылки-«кнопки» */
+.nav a {
+  display: inline-block;      
+  background: #1c1c1c;
+  color: #ccc;
+  text-decoration: none;
+  border: 1px solid #333;
+  border-radius: 8px;
+
+  /* Уменьшаем padding и шрифт, чтобы при многих разделах влезали */
+  padding: 10px 12px;    /* Было 18px 20px */
+  font-size: 1.2rem;     /* Было 1.5rem */
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+/* При наведении */
+.nav a:hover {
+  background: #2a2a2a;
+}
+
+/* Активная вкладка */
+.nav a.active {
+  background: #ff3b00;
+  color: #fff;
+  border: none;
+}
+
+/* Разделы (секции) */
+.section {
+  background:#1c1c1c;
+  border-radius:10px;
+  padding:16px;
+  box-shadow:0 2px 6px rgba(255,59,0,0.2);
+  margin-bottom:16px;
+}
+.section h2 {
+  text-align:center;
+  margin:0 0 10px 0;
+  color:#ff3b00;
+  font-size:1.2rem;
+  font-weight:700;
+}
+
+/* Формы */
+.form-group {
+  margin-bottom:10px;
+}
+label {
+  display:block;
+  font-weight:600;
+  margin-bottom:4px;
+  color:#ff3b00;
+}
+input, textarea {
+  width:100%;
+  background:#2a2a2a;
+  color:#fff;
+  border:1px solid #444;
+  border-radius:6px;
+  padding:10px;
+  font-size:1rem;
+  box-sizing:border-box;
+}
+#workout-notes {
+  resize: none !important;
+  height: 90px;
+}
+#add-workout-btn {
+  background:#ff3b00;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+
+  padding:18px 24px;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.2s ease;
+  width:100%;
+  margin-top:8px;
+  box-sizing:border-box;
+}
+#add-workout-btn:hover {
+  background:#e73600;
+  transform:scale(1.01);
+  box-shadow:0 4px 12px rgba(255,59,0,0.3);
+}
+
+/* Список тренировок (workout-card) */
+#workouts-list {
+  margin-top:10px;
+}
+.workout-card {
+  background:#2a2a2a;
+  border:1px solid #333;
+  border-radius:8px;
+
+  padding:15px 15px 30px;
+  padding-right: 170px; /* резервируем место справа под кнопки */
+  min-height:100px;
+  margin-bottom:10px;
+  position:relative;
+  box-sizing:border-box;
+}
+.workout-card .date {
+  font-weight:600;
+  color:#ff3b00;
+  margin-bottom:5px;
+}
+.workout-card .type {
+  color:#fff;
+  font-weight:500;
+  margin-bottom:5px;
+}
+.workout-card .duration {
+  color:#ccc;
+  margin-bottom:5px;
+}
+.workout-card .notes {
+  color:#aaa;
+  font-style:italic;
+}
+
+/* Кнопки действий (Изменить/Удалить) */
+.edit-btn,
+.delete-btn {
+  position: absolute;
+  background: #ff3b00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: auto;
+  min-width: 120px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-sizing:border-box;
+}
+.edit-btn {
+  top: 10px;
+  right: 15px;
+}
+.delete-btn {
+  top: 60px;
+  right: 15px;
+}
+
+/* Форма редактирования */
+.edit-form {
+  background:#1c1c1c;
+  border:1px solid #333;
+  border-radius:6px;
+  margin-top:5px;
+  padding:8px;
+  margin-bottom:0;
+  display:none;
+  max-width:600px;
+}
+.edit-group {
+  margin-bottom:4px;
+}
+.edit-group label {
+  color:#ff3b00;
+  font-weight:600;
+  margin-bottom:4px;
+  display:block;
+}
+.edit-group input {
+  background:#333;
+  width:599px;
+  padding:8px;
+  margin-bottom:5px;
+  color:#fff;
+  border:1px solid #444;
+  border-radius:4px;
+}
+.save-edit-btn {
+  background: #ff3b00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding: 18px 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.save-edit-btn:hover {
+  background: #e73600;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255,59,0,0.3);
+}
+#edit-notes {
+  height:60px;
+  resize:vertical;
+}
+
+/* Toast */
+.notification {
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:#2a2a2a;
+  color:#fff;
+  border:1px solid #444;
+  border-radius:8px;
+
+  padding:24px 32px;
+  font-size:0.9rem;
+  font-weight:700;
+  line-height:1.4;
+  box-shadow:0 2px 6px rgba(255,59,0,0.2);
+  max-width:380px;
+  z-index:9999;
+}
+.notification.hidden {
+  display:none;
+}
+
+/* Диаграммы (Chart.js) */
+.chart-container {
+  width:900px; 
+  height:600px;
+  margin:0 auto 20px;
+  position:relative;
+  background:#2a2a2a;
+  border:1px solid #333;
+  border-radius:6px;
+}
+.chart-container canvas {
+  width:100%!important;
+  height:100%!important;
+}
+
+/* Адаптив <600px */
+@media (max-width:600px){
+  .cabinet-header {
+    height:36px;
+  }
+  .fit-power-title {
+    font-size:1.4rem;
+    top:2px; 
+    left:6px;
+  }
+  #logout-btn {
+    top:5px; 
+    right:5px;
+    font-size:0.8rem; 
+    padding:14px20px;
+  }
+  .nav {
+    gap:6px;
+  }
+  .chart-container {
+    width:95%;
+    height:250px;
+  }
+  #add-workout-btn {
+    padding:14px20px;
+    font-size:0.8rem;
+  }
+  .edit-btn,
+  .delete-btn {
+    padding:10px15px;
+    font-size:0.9rem;
+    right:10px;
+  }
+  .notification {
+    padding:16px20px;
+    font-size:0.8rem;
+    max-width:300px;
+  }
+  .workout-card {
+    padding-right:140px;
+    min-height:140px;
+    overflow:hidden;
+  }
+}

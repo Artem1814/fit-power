@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fit-Power (Подтверждение регистрации)</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+    }
+    /* Общий контейнер */
+    .cabinet-wrapper {
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .cabinet-header {
+      position: relative;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+    .fit-power-title {
+      position: absolute;
+      left: 10px;
+      top: 5px;
+      margin: 0;
+      font-size: 1.6rem;
+      color: #ff3b00;
+      font-weight: 700;
+    }
+    /* Блок секции */
+    .section {
+      background: #1c1c1c;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 6px rgba(255, 59, 0, 0.2);
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: center; /* центрируем контент по горизонтали */
+    }
+    /* Внутренний контейнер, чтобы текст держался в 600px */
+    .section-content {
+      max-width: 600px;
+      text-align: center;
+    }
+    .section h2 {
+      margin: 0 0 16px 0;
+      color: #ff3b00;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .section p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin: 0 0 24px 0;
+      color: #ddd;
+    }
+    .btn-link {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #ff3b00;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+    .btn-link:hover {
+      background: #e73600;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 59, 0, 0.4);
+    }
+    /* Больше отступов снизу для наглядности */
+    .section-content p:last-of-type {
+      margin-bottom: 32px;
+    }
+    /* Для очень узких экранов */
+    @media (max-width: 480px) {
+      .section {
+        padding: 20px;
+      }
+      .section-content {
+        max-width: 100%;
+      }
+      .section h2 {
+        font-size: 1.6rem;
+      }
+      .section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+  <!-- Иконки -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <div class="cabinet-wrapper">
+    <header class="cabinet-header">
+      <h1 class="fit-power-title">FIT-POWER</h1>
+    </header>
+
+    <div class="section">
+      <div class="section-content">
+        <h2>Поздравляем!</h2>
+        <p>
+          Ваш email успешно подтверждён. Теперь вы можете войти в личный кабинет и пользоваться всеми функциями Fit-Power! 
+          Желаем эффективных тренировок и уверенного прогресса в достижении ваших целей.
+        </p>
+        <a href="/lk/login.html" class="btn-link">Войти в личный кабинет</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

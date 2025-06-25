@@ -1,0 +1,91 @@
+/* Стили для страницы "Мой тренер" */
+
+.trainer-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  /*padding: 20px;*/
+}
+
+.trainer-card {
+  background: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(255,59,0,0.2);
+  margin-bottom: 10px;
+}
+
+.trainer-card h2 {
+  text-align: center;
+  color: #ff3b00;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  color: #ff3b00;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#bind-btn {
+  display: block;
+  width: 100%;
+  background: #ff3b00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+  transition: background 0.3s;
+}
+#bind-btn:hover {
+  background: #e73600;
+}
+
+#trainer-info-section {
+  margin-top: 10px;
+}
+.trainer-info {
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Дополнительное оформление метки "Ваш тренер:" */
+.trainer-label {
+  color: #ff3b00; 
+  font-weight: 700;
+  margin-right: 6px;
+}
+#unbind-btn {
+  background: #ff3b00;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;           /* <-- курсор при наведении */
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+#unbind-btn:hover {
+  background: #e73600;
+}

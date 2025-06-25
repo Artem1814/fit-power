@@ -1,0 +1,361 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #fff4ef;
+  color: #222;
+  text-align: center;
+}
+.login {
+  margin-top: 60px;
+}
+#top {
+  background: #ef290433;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+select {
+  padding: 6px 14px;
+  font-size: 15px;
+  border: 1px solid #ef2904;
+  border-radius: 4px;
+}
+.btn {
+  background: #ef2904;
+  color: #fff;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.btn-sec {
+  background: #fff;
+  color: #ef2904;
+  border: 2px solid #ef2904;
+}
+textarea {
+  width: 90%;
+  height: 500px;
+  padding: 18px;
+  border: 2px solid #ef2904;
+  border-radius: 4px;
+}
+.mytext {
+  display: block;
+  background: #fff;
+  margin: 14px 40px;
+  padding: 10px 20px;
+  border: 2px solid #ef290433;
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+.mytext:hover {
+  background: #ef290433;
+}
+.kartinka {
+  display: inline-block;
+  padding: 16px 20px 6px;
+  text-align: center;
+}
+.bigimg {
+  max-width: 80%;
+  height: auto;
+}
+#banner {
+  background: #fffbe7;
+  color: #664d00;
+  border: 1px solid #ffe08a;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.drop-zone {
+  width: 90%;
+  max-width: 600px;
+  height: 160px;
+  border: 3px dashed #ef2904;
+  border-radius: 6px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.drop-zone.drag {
+  background: #ef290433;
+}
+body.dark {
+  background: #1f1f1f;
+  color: #eee;
+}
+body.dark .btn-sec {
+  color: #ff4d1f;
+  border-color: #ff4d1f;
+}
+body.dark .mytext {
+  background: #2a2a2a;
+  border-color: #444;
+}
+body.dark textarea {
+  background: #2a2a2a;
+  color: #eee;
+}
+body.dark .drop-zone {
+  border-color: #ff4d1f;
+  color: #bbb;
+}
+
+.btn:hover{background:#d92300}       
+
+.btn.current{                          
+    background:#c31e00;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #fff4ef;
+  color: #222;
+  text-align: center;
+}
+
+.login {
+  margin-top: 60px;
+}
+
+#top {
+  background: #ef290433;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+select {
+  padding: 6px 14px;
+  font-size: 15px;
+  border: 1px solid #ef2904;
+  border-radius: 4px;
+}
+
+.btn {
+  background: #ef2904;
+  color: #fff;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-sec {
+  background: #fff;
+  color: #ef2904;
+  border: 2px solid #ef2904;
+}
+
+textarea {
+  width: 90%;
+  height: 500px;
+  padding: 18px;
+  border: 2px solid #ef2904;
+  border-radius: 4px;
+}
+
+.mytext {
+  display: block;
+  background: #fff;
+  margin: 14px 40px;
+  padding: 10px 20px;
+  border: 2px solid #ef290433;
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.mytext:hover {
+  background: #ef290433;
+}
+
+.kartinka {
+  display: inline-block;
+  padding: 16px 20px 6px;
+  text-align: center;
+}
+
+.bigimg {
+  max-width: 80%;
+  height: auto;
+}
+
+#banner {
+  background: #fffbe7;
+  color: #664d00;
+  border: 1px solid #ffe08a;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.drop-zone {
+  width: 90%;
+  max-width: 600px;
+  height: 160px;
+  border: 3px dashed #ef2904;
+  border-radius: 6px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drop-zone.drag {
+  background: #ef290433;
+}
+
+body.dark {
+  background: #1f1f1f;
+  color: #eee;
+}
+
+body.dark .btn-sec {
+  color: #ff4d1f;
+  border-color: #ff4d1f;
+}
+
+body.dark .mytext {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark textarea {
+  background: #2a2a2a;
+  color: #eee;
+}
+
+body.dark .drop-zone {
+  border-color: #ff4d1f;
+  color: #bbb;
+}
+
+.btn:hover {
+  background: #d92300;
+}
+
+.btn.current {
+  background: #c31e00;
+}
+
+/* ===== Базовая защита от переполнения ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ===== Комментарии (full‑width) =================================== */
+#comm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 24px;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.comm-card {
+  display: flex;
+  gap: 14px;
+  padding: 16px 18px;
+  width: 100%;
+  background: #f2f2f2; /* светло-серый фон */
+  border: 1px solid #000000; /* чёрная рамка */
+  border-radius: 8px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.comm-card:hover {
+  border-color: #ff3b00; /* оранжевая рамка при наведении */
+}
+
+
+.comm-avatar img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comm-body {
+  flex: 1 1 auto;
+}
+
+.comm-body header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.comm-user {
+  color: #000;
+  font-weight: 600;
+}
+
+.comm-text {
+  margin: 0;
+  color: #333;
+  line-height: 1.45;
+}
+
+.comm-del {
+  border: none;
+  background: #eaeaea;
+  color: #ff3b00;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.comm-del:hover {
+  background: #ff3b00;
+  color: #fff;
+}
+/* ===== Тренеры: таблица + действия ===== */
+.tr-table            { width:100%; border-collapse:collapse; font-size:.95rem }
+.tr-table thead th   { background:#ef2904; color:#fff; padding:10px 12px }
+.tr-table tbody td   { padding:10px 12px; border-top:1px solid #ef290433 }
+.tr-table tbody tr:nth-child(odd) { background:#fff4ef }
+.tr-table tbody tr:hover { background:#ffe1d6 }
+
+.tr-actions         { display:flex; gap:10px }
+.tr-btn.del         { padding:6px 18px; font-size:.9rem;
+                      background:#ef2904; color:#fff; border:none;
+                      border-radius:4px; cursor:pointer; }
+.tr-btn.del:hover   { background:#d92300 }
+
+/* ===== Форма добавления тренера ===== */
+.tr-form            { max-width:420px; margin:0 auto 24px }
+.tr-form label      { display:block; margin:12px 0 4px; text-align:left }
+.tr-form input      { width:100%; padding:8px 10px; border:2px solid #ef290433;
+                      border-radius:4px; background:#fff; color:#222 }
+.tr-form button     { margin-top:18px }
+.tr-msg             { font-size:.9rem; color:#ef2904; margin:6px 0 0 }
+
+/* Dark‑mode поддержки, если включаете body.dark */
+body.dark .tr-table tbody tr:nth-child(odd){ background:#2a2a2a }
+body.dark .tr-table tbody tr:hover        { background:#333 }
+body.dark .tr-form input                  { background:#1f1f1f; color:#eee;
+                                            border-color:#444 }

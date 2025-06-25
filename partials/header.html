@@ -1,0 +1,47 @@
+<style>
+  .menu-btn-wrapper {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание всего внутри */
+  }
+</style>
+
+<section id="nav" class="nav-section">
+  <div data-w-id="5bbbe82f-834e-d37c-4eca-bb1482146317" data-animation="default" data-collapse="all" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-2 w-nav">
+     <div class="nav-container w-container">
+        <div class="nav-wrapper">
+           <a href="/" aria-current="page" class="brand w-nav-brand w--current"><img src="/img/logo.svg" loading="lazy" width="53" alt="" class="logo-image"/></a>
+           <nav role="navigation" class="nav-menu w-nav-menu">
+              <div class="nav-div"><a href="../" aria-current="page" class="nav-link w-nav-link w--current">Главная</a><a href="../training-programs.html" class="nav-link w-nav-link">Программы </a><a href="../#faq" class="nav-link w-nav-link">Вопросы</a><a href="../articles-insights" class="nav-link w-nav-link">Блог</a><a href="../recipes-insights" class="nav-link w-nav-link">Рецепты</a><a href="#footer" class="nav-link w-nav-link">Контакты</a></div>
+           </nav>
+           <div class="menu-btn-wrapper">
+               <a id="cabinet-link" class="nav-btn w-button">
+               Личный кабинет
+               </a>
+              <div class="menu-button w-nav-button">
+                 <div class="menu-icon-div">
+                    <div class="heading-3 small">меню</div>
+                </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  // Логика кнопки «Личный кабинет»:
+  const cabinetLink = document.getElementById('cabinet-link');
+  
+  cabinetLink.addEventListener('click', (evt) => {
+    evt.preventDefault();
+
+    const userId = localStorage.getItem('user_id');
+    if (userId) {
+      window.open('/lk/add.html', '_blank'); 
+    } else {
+      window.open('/lk/login.html', '_blank'); 
+    }
+  });
+})();
+</script>

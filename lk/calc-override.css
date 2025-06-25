@@ -1,0 +1,78 @@
+/* calc-override.css */
+
+/* Стили для селектов (пол, активность) в форме #calc-form */
+#calc-form select {
+  width: 100%;
+  background: #2a2a2a;  /* тёмный фон в тон остальным полям */
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 12px; 
+  font-size: 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-bottom: 10px;  /* небольшой отступ снизу */
+}
+
+/* При наведении */
+#calc-form select:hover {
+  background: #333; 
+}
+
+/* При фокусе (клик по селекту) */
+#calc-form select:focus {
+  outline: none;
+  border-color: #ff3b00; /* цвет обводки при фокусе */
+}
+
+/* Дополнительно стили опций (не всегда работает во всех браузерах) */
+#calc-form select option {
+  background: #2a2a2a; 
+  color: #fff;
+}
+
+/* Стили кнопки "Рассчитать" (id="calc-btn") */
+#calc-btn {
+  background: #ff3b00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+
+  padding: 18px 24px; /* делаем кнопку толще */
+  font-size: 1rem; 
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+#calc-btn:hover {
+  background: #e73600;
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(255,59,0,0.3);
+}
+#calc-result:empty {
+  display: none; /* скрываем пустой блок */
+}
+#calc-result {
+  background: #2a2a2a;          /* фон, как остальная темная тема */
+  border: 1px solid #333;       /* рамка */
+  border-radius: 6px;
+  padding: 16px;                /* отступы внутри */
+  margin-top: 16px;             /* небольшой отступ сверху */
+  color: #fff;                  /* текст белым */
+  line-height: 1.4;             /* читаемая высота строки */
+}
+
+/* Параграфы внутри #calc-result */
+#calc-result p {
+  margin: 8px 0;               /* отступ между параграфами */
+}
+
+/* Если хотите ещё сильнее выделить цифры (ккал/день), 
+   можете стилизовать <b> */
+#calc-result b {
+  color: #ff3b00;              /* яркий цвет для выделения */
+  font-size: 1.1rem;           /* чуть больше */
+  font-weight: 700;            /* жирный */
+}
